@@ -1,0 +1,14 @@
+#menuIcon{
+    display: none;
+}
+
+@media screen and (max-width: 500px) {
+    .deskMenu{
+        display: none;
+    }
+    #menuIcon{
+        display: flex;
+        justify-content: end;
+        flex-grow: 1;
+    }
+}
