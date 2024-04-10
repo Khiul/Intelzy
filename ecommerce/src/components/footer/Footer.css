@@ -1,0 +1,6 @@
+footer{
+    height: 50px;
+    display: grid;
+    place-items: center;
+    box-shadow: 0 -3px 3px rgba(90, 90, 90, 0.411);
+}   

@@ -1,17 +1,3 @@
-table button{
-    background-color: red;
-    border: none;
-    color: white;
-    border-radius: 5px;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-table button:hover{
-    opacity: 0.5;
-}
-table button:active{
-    opacity: 1;
-}
 table{
     width: calc(100vw - 20px);
     text-align: center;
@@ -27,4 +13,10 @@ th{
 }
 tbody img{
     height: 100px;
+}
+.delete-btn{
+    width: 24px;
+    height:24px;
+    cursor:pointer;
+    color:red;
 }

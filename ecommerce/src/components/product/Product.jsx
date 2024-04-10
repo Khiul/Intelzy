@@ -9,7 +9,6 @@ const Product = () => {
     const data = await resp.json();
     setProducts(data);
   };
-  console.log(products);
   useEffect(() => {
     getProducts();
   }, []);

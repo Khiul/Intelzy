@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
 import Cart from './components/cart/Cart';
 import { Toaster } from 'react-hot-toast';
+import Footer from './components/footer/Footer';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart/>}/>
       </Routes>
+      <Footer/>
     </BrowserRouter>
   );
 }

@@ -1,52 +1,34 @@
-import React, { useEffect, useState } from 'react';
-import './Cart.css';
-import CartCard from './CartCard';
+import CartCard from "./CartCard"
+import React, { useEffect, useState } from 'react'
 
 const Cart = () => {
-  const [cart, setCart] = useState([]);
-
-  const fetchCartData = async () => {
-    try {
-      const response = await fetch('http://localhost:3000/cart');
-      const data = await response.json();
-      setCart(data);
-    } catch (error) {
-      console.error('Error fetching cart data:', error);
-    }
-  };
-
-  const deleteCartItem = async (itemId) => {
-    try {
-      await fetch(`http://localhost:3000/cart/${itemId}`, {
-        method: 'DELETE',
-      });
-      fetchCartData();
-    } catch (error) {
-      console.error('Error deleting from cart:', error);
-    }
-  };
-
-  useEffect(() => {
-    fetchCartData();
-  }, []);
-
+  const [cartData,setCartData]=useState([])
+  const fetchCartData=async()=>{
+    const resp=await fetch('http://localhost:3000/cart')
+    const data=await resp.json()
+    setCartData(data)
+  }
+  useEffect(()=>{
+    fetchCartData()
+  },[])
   return (
+    cartData.length==0? <div>No cart available</div>:
     <table>
       <thead>
         <tr>
-          <th>Image</th>
+        <th>Image</th>
           <th>Name</th>
           <th>Price</th>
           <th>Action</th>
         </tr>
       </thead>
       <tbody>
-        {cart.map((item) => (
-          <CartCard key={item.id} item={item} onDelete={deleteCartItem} />
+        {cartData.map((item)=>(
+          <CartCard key={item.id} item={item} fetchCartData={fetchCartData}/>
         ))}
       </tbody>
     </table>
-  );
-};
+  )
+}
 
-export default Cart;
+export default Cart

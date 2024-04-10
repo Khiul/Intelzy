@@ -1,15 +1,24 @@
-import React from 'react';
-import toast from 'react-hot-toast'
+import React from "react";
+import "./Cart.css";
+import toast from "react-hot-toast";
+import { MdDelete } from "react-icons/md";
 
-const CartCard = ({ item, onDelete }) => {
-  const handleDelete = () => {
-    const isConfirmed = window.confirm(`Are you sure you want to delete ${item.title}?`);
-    if (isConfirmed) {
-      onDelete(item.id);
-      toast.success('Cart deleted successfully')
+
+const CartCard = ({ item, fetchCartData }) => {
+  const handleDelete = async () => {
+    const isConfirmed=window.confirm(`Are you sure you want to delete ${item.title}?`)
+  if(isConfirmed){
+    const resp = await fetch(`http://localhost:3000/cart/${item.id}`, {
+      method: "DELETE",
+    });
+    const data = await resp.json();
+    if(data){
+      toast.success(`${item.title} deleted successfully`)
+      fetchCartData()
     }
   };
-
+  }
+    
   return (
     <tr>
       <td>
@@ -18,7 +27,7 @@ const CartCard = ({ item, onDelete }) => {
       <td>{item.title}</td>
       <td>Rs. {item.price}</td>
       <td>
-        <button onClick={handleDelete}>Delete</button>
+      <MdDelete onClick={handleDelete} className="delete-btn"/>
       </td>
     </tr>
   );
