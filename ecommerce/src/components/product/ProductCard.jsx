@@ -21,7 +21,7 @@ const ProductCard = ({item}) => {
       <div className="content">
         <div style={{display:'flex',justifyContent:'flex-end'}}>{item.brand}</div>
         <div><b>{item.title}</b></div>
-        {/* <div> {item.description}</div> */}
+        <div> {item.category}</div>
         <div>${item.price}</div>
         <button onClick={addtocart}>Add to Cart</button>
       </div>

@@ -8,6 +8,7 @@ import { Toaster } from 'react-hot-toast';
 import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Admin from './components/admin/Admin';
+import AdminAddProduct from './components/admin/AdminAddProduct';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path='/cart' element={<Cart/>}/>
         <Route path='/login' element={<Login/>}/>
         <Route path='/admin' element={<Admin/>}/>
+        <Route path='/admin/addProduct' element={<AdminAddProduct/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

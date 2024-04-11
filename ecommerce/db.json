@@ -604,6 +604,14 @@
         "https://cdn.dummyjson.com/product-images/2/3.jpg",
         "https://cdn.dummyjson.com/product-images/2/thumbnail.jpg"
       ]
+    },
+    {
+      "id": "0684",
+      "title": "Huawei Y7 pro",
+      "brand": "Huawei",
+      "category": "Smartphone",
+      "price": "222",
+      "thumbnail": "https://m.media-amazon.com/images/I/61El799HPBL._AC_SL1000_.jpg"
     }
   ]
 }
