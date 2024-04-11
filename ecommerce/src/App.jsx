@@ -6,6 +6,8 @@ import Home from './components/home/Home';
 import Cart from './components/cart/Cart';
 import { Toaster } from 'react-hot-toast';
 import Footer from './components/footer/Footer';
+import Login from './components/login/Login';
+import Admin from './components/admin/Admin';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart/>}/>
+        <Route path='/login' element={<Login/>}/>
+        <Route path='/admin' element={<Admin/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

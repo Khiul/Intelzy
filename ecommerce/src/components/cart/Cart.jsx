@@ -3,16 +3,18 @@ import React, { useEffect, useState } from 'react'
 
 const Cart = () => {
   const [cartData,setCartData]=useState([])
+
   const fetchCartData=async()=>{
     const resp=await fetch('http://localhost:3000/cart')
     const data=await resp.json()
     setCartData(data)
   }
-  useEffect(()=>{
+  useEffect(()=>{ 
     fetchCartData()
   },[])
   return (
     cartData.length==0? <div>No cart available</div>:
+    <div className="cart-body">
     <table>
       <thead>
         <tr>
@@ -28,6 +30,7 @@ const Cart = () => {
         ))}
       </tbody>
     </table>
+    </div>
   )
 }
 

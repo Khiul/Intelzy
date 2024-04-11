@@ -1,8 +1,7 @@
 table{
-    width: calc(100vw - 20px);
+    width: 100%;
     text-align: center;
     justify-content: center;
-    margin: 10px;
 }
 table,th, td{
     border: 1px solid black;
@@ -19,4 +18,8 @@ tbody img{
     height:24px;
     cursor:pointer;
     color:red;
+}
+.cart-body{
+    min-height: calc(100vh - 118px);
+    padding: 10px;
 }

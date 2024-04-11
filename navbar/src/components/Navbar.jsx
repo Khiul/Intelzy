@@ -1,28 +1,20 @@
-import React, { useState } from 'react';
-import './Navbar.css'; 
-import { FiMenu } from "react-icons/fi";
-import { IoMdClose } from "react-icons/io";
+import React from 'react'
+import './Navbar.css'
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleNavbar = () => {
-    setIsOpen(!isOpen);
-  };
-
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">Logo</div>
-      <ul className={isOpen ? "navbar-links active" : "navbar-links"}>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Services</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
-      <div className="navbar-toggle" onClick={toggleNavbar}>
-      {isOpen ? <FiMenu /> : <IoMdClose />}      </div>
+    <nav>
+      <div className="logo">
+        <h1>Logo</h1>
+      </div>
+      <div className="menus">
+        <div>Home</div>
+        <div>About</div>
+        <div>Contact</div>
+        <div>Services</div>
+      </div>
     </nav>
-  );
-};
+  )
+}
 
-export default Navbar;
+export default Navbar
