@@ -1,5 +1,6 @@
 import React from "react";
 import toast from "react-hot-toast";
+import { Link } from "react-router-dom";
 
 const AdminProductCard = ({ item, getProducts }) => {
   const handleDelete = async () => {
@@ -26,6 +27,7 @@ const AdminProductCard = ({ item, getProducts }) => {
       <td>{item.price}</td>
       <td>{item.category}</td>
       <td>
+        <button> <Link to={`/admin/editProduct/${item.id}/`} >edit</Link></button>
         <button onClick={handleDelete}>delete</button>
       </td>
     </tr>

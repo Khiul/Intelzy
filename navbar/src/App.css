@@ -1,0 +1,7 @@
+.cards{
+    display: flex;
+    gap: 10px;
+}
+.cards .active{
+    border: 2px solid tomato;
+}

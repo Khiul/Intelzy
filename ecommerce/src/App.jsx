@@ -9,6 +9,7 @@ import Footer from './components/footer/Footer';
 import Login from './components/login/Login';
 import Admin from './components/admin/Admin';
 import AdminAddProduct from './components/admin/AdminAddProduct';
+import AdminEditProduct from './components/admin/AdminEditProduct';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/login' element={<Login/>}/>
         <Route path='/admin' element={<Admin/>}/>
         <Route path='/admin/addProduct' element={<AdminAddProduct/>}/>
+        <Route path='/admin/editProduct/:id' element={<AdminEditProduct/>}/>
       </Routes>
       <Footer/>
     </BrowserRouter>

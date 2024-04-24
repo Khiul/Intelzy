@@ -6,22 +6,24 @@
     text-align: justify;
 }
 .cards .card{
-    border: 1px solid rgba(0, 0, 0, 0.555);
+    background-color: #f2f2f2;
+    border-radius: 20px;
 }
 .cards .card .content{
-    padding: 10px;
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    text-align: center;
 }
 .cards .card .content button{
     border: none;
     background-color: red;
-    color: white;
-    padding: 5px 10px;
+    color: rgb(255, 255, 255);
+    padding: 10px 10px;
     border-radius: 5px;
     cursor: pointer;
+    font-size: 16px;
+    font-weight: 400;
 }
 .cards .card .content button:hover{
     opacity: 0.5;
@@ -30,9 +32,10 @@
     opacity: 1;
 }
 .cards img{
-    height: 250px;
+    height: 225px;
     width: 100%;
     object-fit: cover;
+    border-radius: 10px;
 }
 .content{
     display: flex;

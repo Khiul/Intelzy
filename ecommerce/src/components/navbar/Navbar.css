@@ -3,6 +3,7 @@
     justify-content: space-between;
     padding: 20px 20px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.541);
+    color: white;
 }
 .links{
     display: flex;
@@ -11,3 +12,9 @@
     align-items: center;
     gap: 20px;
 }   
+.links a{
+    color: white;
+}
+.links .active{
+    color: red;
+}
